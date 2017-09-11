@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Metode</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			text-align: center;
+		}
+		#X, #Y, #Z{
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script>
+		function buatHasil(X, Y, Z) {
+			var body = document.body,
+			imgX = body.querySelector('#X'),
+			imgY = body.querySelector('#Y'),
+			omgZ = body.querySelector('#Z');
+			imgX.setAttribute('src', X);
+			imgX.setAttribute('src', Y);
+			imgX.setAttribute('src', Z);
+
+			body.onload = function() {
+				window.print();
+			}
+		}
+	</script>
+</head>
+<body>
+<img id="X" src="blank">
+<img id="Y" src="blank">
+<img id="Y" src="blank">
+</body>
+<script>

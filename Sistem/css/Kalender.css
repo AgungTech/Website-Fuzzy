@@ -1,0 +1,94 @@
+#kalender{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	border: 1px DeepSkyBlue solid;
+	box-shadow: 0 0 2px 0 DeepSkyBlue;
+	font-family: 'Segoe UI';
+	font-size: 11px;
+	color:black;
+	text-align: center;
+	cursor: default;
+	transform: scale(0, 0);
+	opacity: 0;
+	overflow: hidden;
+	z-index: 888;
+}
+#kalender > table{
+	width: 100%;
+	height: 100%;
+}
+#kalender > table > thead{
+	position: absolute;
+	top:0;
+	left: 0;
+	background: DeepSkyBlue;
+	font-size: 11px;
+	z-index: 300;
+}
+#kalender > table > thead > tr > td{
+	width: 188px;
+	transition: .2s;
+}
+#kalender > table > thead > tr > td:hover{
+	background: white;
+	border-radius: 15px;
+}
+#kalender > table > thead > tr > td[disabled]:hover{
+	background: #F56;
+	color: white;
+}
+#kalender > table > thead > tr > td:first-child,
+#kalender > table > thead > tr > td:last-child{
+	width: 21px;
+	font-family: 'SegoeIkon';
+	font-weight: bold;
+}
+#kalender > table > thead > tr > td:last-child::before{
+	content : '\E00F';
+}
+#kalender > table > thead > tr > td:first-child::before{
+	content : '\E00E';
+}
+#kalender > table > tbody{
+	position: absolute;
+	top:21px;
+	left: 0;
+	background: rgba(255,255,255,.5);
+	transition: opacity .2s, transform .4s;
+}
+#kalender > table > tbody > tr > td{
+	background: transparent;
+	transition: background .2s, border-radius .3s;
+}
+#kalender > table > #harian > tr > td{
+	width: 25px;
+	height: 21.3px;
+}
+#kalender > table > #bulanan > tr > td{
+	width: 66px;
+	height: 40.3px;
+}
+#kalender > table > #tahunan > tr > td{
+	width: 50px;
+	height: 31.4px;
+}
+#kalender > table > #harian > tr > td:first-child{
+	color: red;
+}
+#kalender > table > tbody > tr > td:hover,
+#kalender > table > tbody > tr > td[aktif]{
+	background: DeepSkyBlue;
+	border-radius:15px;
+}
+#kalender > table > tbody > tr > td[disabled]{
+	background: #AAA;
+	color: white;
+}
+#kalender > table > tbody > tr > td[disabled]:hover{
+	background: #F56;
+	color: white;
+	border-radius:15px;
+}

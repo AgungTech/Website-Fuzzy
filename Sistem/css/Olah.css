@@ -1,0 +1,46 @@
+#dialogOlah{
+	position: fixed;
+	padding: 10px;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+	background: rgba(255,255,255,.7);
+	transition: .5s;
+	opacity: 0;
+	transform: scale(0,0);
+	box-shadow: 0 0 2px black;
+	z-index: 777;
+}
+#dialogOlah > #Permintaan,
+#dialogOlah > #Persediaan{
+	margin: 0;
+	display: inline-block;
+}
+#dialogOlah > #Produksi{
+
+	margin: 0;
+	display: inline-block;
+}
+#dialogOlah > div{
+	display: inline-block;
+	width: 100%;
+}
+#dialogOlah input{
+	display: inline-block;
+	margin: 5px;
+	padding: 2px 4px;
+	width: 100px;
+	font-size: 11px;
+	background: #DDD;
+	color: black;
+	font-weight: bold;
+	border: none;
+	transition: .5s;
+}
+#dialogOlah input:hover{
+	background: DeepSkyBlue;
+}
